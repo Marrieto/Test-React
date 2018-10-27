@@ -7,8 +7,18 @@ const propTypes = {
     title: PropTypes.string.isRequired
 }
 
+const defaultProps = {
+    name: 'Default name the component',
+    title: 'Default title of the component'
+}
+
 class MyComponent extends Component {
     
+    componentWillMount()
+    {
+        // Good place to do ajax requests, db requests
+    }
+
     render() {
 
         const { title, name, onClick } = this.props
@@ -24,5 +34,6 @@ class MyComponent extends Component {
 }
 
 MyComponent.propTypes = propTypes
+MyComponent.defaultProps = defaultProps
 
 export default MyComponent
