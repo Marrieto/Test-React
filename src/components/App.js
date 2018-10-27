@@ -25,8 +25,8 @@ class App extends Component {
             <h1>{this.state.title}</h1>
             <div onClick={this.onClick}> Click me! </div>
             <MyComponent 
-            title="This is the comp title"
-            name="Michael"
+            title="My Comonent"
+            name= "Erik"
             onClick={this.onClick}/>
         </div>
         )

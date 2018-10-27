@@ -1,4 +1,11 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types' // Type safety on props, let the user know what props are needed
+
+const propTypes = {
+    name: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
+    title: PropTypes.string.isRequired
+}
 
 class MyComponent extends Component {
     
@@ -15,5 +22,7 @@ class MyComponent extends Component {
         
     }
 }
+
+MyComponent.propTypes = propTypes
 
 export default MyComponent
