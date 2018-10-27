@@ -2,38 +2,27 @@ import React, {Component} from 'react'
 
 class App extends Component {
 
+    constructor(props)
+    {
+        super(props)
+        this.onClick = this.onClick.bind(this)
 
-    onClick() {
-        alert('Clicked')
+        this.state = {
+            title: 'Reactions'
+        }
     }
 
-    onChange(event) {
-        console.log(event.target.value)
-    }
-
-    onSubmit(event) {
-        event.preventDefault()
-        alert('Submitted')
+    onClick(event) {
+        this.setState({
+            title: 'New titleo'
+        })
     }
 
     render() {
-
-        const title = 'This is Martin\'s app'
-        const list = ['Item 1', 'Item 2', 'Item 3']
-
         return (
         <div>
-            <h1>{title}</h1>
-            <h3> 
-                {
-                    list.map(item => <div key={item} onClick={this.onClick}> item </div>)
-                }
-            </h3>
-            
-            <form onSubmit={this.onSubmit}>
-                <input onChange={this.onChange}></input>
-            </form>
-            
+            <h1>{this.state.title}</h1>
+            <div onClick={this.onClick}> Click me! </div>
         </div>
         )
         
