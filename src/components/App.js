@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import MyComponent from './MyComponent';
 
 class App extends Component {
 
@@ -23,6 +24,10 @@ class App extends Component {
         <div>
             <h1>{this.state.title}</h1>
             <div onClick={this.onClick}> Click me! </div>
+            <MyComponent 
+            title="This is the comp title"
+            name="Michael"
+            onClick={this.onClick}/>
         </div>
         )
         
