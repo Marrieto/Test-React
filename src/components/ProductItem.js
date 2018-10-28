@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../Styles/Button';
 
 class ProductItem extends Component {
 
@@ -25,7 +26,7 @@ class ProductItem extends Component {
             {` | `}
             <span>{price}</span>
             {` | `}
-            <button onClick={this.onDelete}>Delete</button>
+            <Button onClick={this.onDelete}>Delete</Button>
          </div>
         );
     }

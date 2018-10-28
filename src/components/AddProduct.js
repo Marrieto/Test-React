@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../Styles/Button'
 
 class AddProduct extends Component {
 
@@ -25,7 +26,7 @@ class AddProduct extends Component {
             <h3>Add product</h3>
             <input placeholder="Name" ref={nameInput => this.nameInput = nameInput}></input>
             <input placeholder="Price" ref={priceInput => this.priceInput = priceInput}></input>
-            <button>Add</button>
+            <Button>Add</Button>
             <hr />
          </form>
         );
