@@ -32,6 +32,7 @@ class App extends Component {
 
         this.onDelete = this.onDelete.bind(this)
         this.onAdd = this.onAdd.bind(this)
+        this.onEditSubmit = this.onEditSubmit.bind(this)
     }
 
     componentWillMount() {
@@ -67,6 +68,22 @@ class App extends Component {
         this.setState( {products: filteredProducts} )
     }
 
+    onEditSubmit(name, price, originalName)
+    {
+        let products = this.getProducts()
+        
+        products = products.map(product => {
+            if (product.name === originalName) {
+                product.name = name
+                product.price = price
+            }
+
+            return product
+        })
+
+        this.setState({ products })
+    }
+
     render() {
         return (
 
@@ -84,6 +101,7 @@ class App extends Component {
                         key={product.name}
                         {...product}
                         onDelete={this.onDelete}
+                        onEditSubmit={this.onEditSubmit}
                         />
                             )
                 })
