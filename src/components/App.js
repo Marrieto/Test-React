@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import ProductItem from './ProductItem';
 import AddProduct from './AddProduct'
- 
+import Header from './Header'
 import Title from '../Styles/Title'
+
 
 const products = [
     {
@@ -87,7 +88,11 @@ class App extends Component {
     render() {
         return (
 
+           
+
         <div className="App">
+
+            <Header title="Martin Lindahl"/>
             <Title>Product manager</Title>
 
             <AddProduct 
