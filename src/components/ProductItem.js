@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../Styles/Button';
 
 class ProductItem extends Component {
 

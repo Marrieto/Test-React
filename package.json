@@ -4,7 +4,7 @@
   "description": "Fooling around with  React and Express",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack-dev-server --mode development --open --hot --debug",
     "build": "webpack --mode production"
   },
   "keywords": [
@@ -18,7 +18,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "styled-components": "^4.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import ProductItem from './ProductItem';
 import AddProduct from './AddProduct'
+ 
+import Title from '../Styles/Title'
 
 const products = [
     {
@@ -86,7 +88,7 @@ class App extends Component {
         return (
 
         <div className="App">
-            <h1> Product manager </h1>
+            <Title>Product manager</Title>
 
             <AddProduct 
                 onSubmit={this.onAdd}
